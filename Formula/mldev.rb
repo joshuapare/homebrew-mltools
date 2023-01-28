@@ -6,23 +6,23 @@ require_relative "custom_download_strategy"
 class Mldev < Formula
   desc "Tools for Mosaic Learning developers and engineers."
   homepage "https://mosaiclearning.com/"
-  version "0.1.3"
+  version "0.1.4"
 
   depends_on "git"
   depends_on "mkcert"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sbhrule15/brew/releases/download/v0.1.3/mldev_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "56fbeb243dc2675ac5600165f8a59bc5a36797c5ae2575f95081d4b3e76b4817"
+      url "https://github.com/sbhrule15/brew/releases/download/v0.1.4/mldev_Darwin_arm64.tar.gz"
+      sha256 "cd0ade20a49c23d6f6f79f34d439d5661c5af70fcf82a799d672d916b6083352"
 
       def install
         bin.install "mldev"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sbhrule15/brew/releases/download/v0.1.3/mldev_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "619d7611c287adbaad3f733d948ded4a8e03447e8de2a6391a561332dfdb8be2"
+      url "https://github.com/sbhrule15/brew/releases/download/v0.1.4/mldev_Darwin_x86_64.tar.gz"
+      sha256 "5d250461637aba89fa3daf3667a66b094b1badd82b574e2b252df5e9010f926d"
 
       def install
         bin.install "mldev"
@@ -32,16 +32,16 @@ class Mldev < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sbhrule15/brew/releases/download/v0.1.3/mldev_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "bb9bb66454051b8d8c5d56da85f191516ea43afe453ff84df1a151013f76170d"
+      url "https://github.com/sbhrule15/brew/releases/download/v0.1.4/mldev_Linux_arm64.tar.gz"
+      sha256 "f3230a6d8731ecd65fcf33986e77ec7d0f9a59201582df829708177b0c1ef62f"
 
       def install
         bin.install "mldev"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sbhrule15/brew/releases/download/v0.1.3/mldev_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "88976bba7a4020e5e2941847feeb7fe32be7da2e593376ebc2c2dccee7e94d7a"
+      url "https://github.com/sbhrule15/brew/releases/download/v0.1.4/mldev_Linux_x86_64.tar.gz"
+      sha256 "4276792bf787f6ddebfe29c855b58491e4132b9bba0e4cd2ec3bef6c231e6d04"
 
       def install
         bin.install "mldev"
