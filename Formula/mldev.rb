@@ -5,23 +5,23 @@
 class Mldev < Formula
   desc "Tools for Mosaic Learning developers and engineers."
   homepage "https://mosaiclearning.com/"
-  version "0.1.5"
+  version "0.3.0"
 
   depends_on "git"
   depends_on "mkcert"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sbhrule15/brew/releases/download/v0.1.5/mldev_Darwin_arm64.tar.gz"
-      sha256 "9797b1c6e68fd93fd186cf6edffb3b4ee0c9d72b6a2e6c1dd8e1d9313e04de6d"
+      url "https://github.com/sbhrule15/homebrew-mltools/releases/download/v0.3.0/mldev_Darwin_arm64.tar.gz"
+      sha256 "529ce2e580197f99d5eea3402d12885932387ef1a6ac677b9f185237f83df597"
 
       def install
         bin.install "mldev"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sbhrule15/brew/releases/download/v0.1.5/mldev_Darwin_x86_64.tar.gz"
-      sha256 "923aba4a80d59f6d7887976e272023b298fae2d6b4d04b718ae5fe168c4b8d8c"
+      url "https://github.com/sbhrule15/homebrew-mltools/releases/download/v0.3.0/mldev_Darwin_x86_64.tar.gz"
+      sha256 "87aa230662be5b45414c21ca55816411710d71e851cfe7a04c1aeb3ffb6598af"
 
       def install
         bin.install "mldev"
@@ -31,16 +31,16 @@ class Mldev < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sbhrule15/brew/releases/download/v0.1.5/mldev_Linux_arm64.tar.gz"
-      sha256 "97c2de5507893e54b498a1813bc9c6235fdd40ba027d68f924449f21e55f3d84"
+      url "https://github.com/sbhrule15/homebrew-mltools/releases/download/v0.3.0/mldev_Linux_arm64.tar.gz"
+      sha256 "7eb0a8aab9c4d0731d78f31e963453c334ead6a878b0f34454d0bb6dac8182de"
 
       def install
         bin.install "mldev"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sbhrule15/brew/releases/download/v0.1.5/mldev_Linux_x86_64.tar.gz"
-      sha256 "8c2c020f3b033a375f7e13352820328c453df0b16114dde2a1f3659aa8654e9b"
+      url "https://github.com/sbhrule15/homebrew-mltools/releases/download/v0.3.0/mldev_Linux_x86_64.tar.gz"
+      sha256 "fb6a1736de2612bd0cba1df98ceaaaa8573a10cf4b34e31beea28e391530bf29"
 
       def install
         bin.install "mldev"
